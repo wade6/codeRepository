@@ -1,4 +1,4 @@
-package com.code.repository.io;
+package com.code.repository.study.io;
 
 public class AutoColseableTest {
 

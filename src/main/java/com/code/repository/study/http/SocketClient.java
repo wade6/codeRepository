@@ -1,4 +1,4 @@
-package com.code.repository.http;
+package com.code.repository.study.http;
 
 import java.io.BufferedReader;
 import java.io.IOException;

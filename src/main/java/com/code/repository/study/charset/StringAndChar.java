@@ -1,4 +1,4 @@
-package com.code.repository.charset;
+package com.code.repository.study.charset;
 
 import java.io.UnsupportedEncodingException;
 

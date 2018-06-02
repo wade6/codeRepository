@@ -1,4 +1,4 @@
-package com.code.repository.io;
+package com.code.repository.study.io;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
