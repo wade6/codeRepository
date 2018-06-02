@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication // same as @Configuration @EnableAutoConfiguration @ComponentScan
 public class Application {
 
+	// http://127.0.0.1:8081/
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
