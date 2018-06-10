@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31215131-38b7-4efe-ab43-649f3a2ab0a8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/repository/study/goodcode/uniqueElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/repository/study/jbpm/JbpmSimple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jbpm.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jbpm.hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test.jpdl.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/code/repository/JbpmTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/code/repository/JbpmTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jbpm.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jbpm.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jbpm.hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jbpm.hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jbpm.jpdl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test.jpdl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/code/repository/study/goodcode/uniqueElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/repository/study/goodcode/UniqueElement.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,198 +19,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JbpmTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/code/repository/JbpmTest.java">
+      <file leaf-file-name="JbpmSimple.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/code/repository/study/jbpm/JbpmSimple.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="85" column="32" lean-forward="true" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1273#1289#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DecisionHandlerActivity.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jbpm/jbpm4/jbpm-jpdl/4.4/jbpm-jpdl-4.4-sources.jar!/org/jbpm/jpdl/internal/activity/DecisionHandlerActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="59" column="39" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExecutionImpl.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jbpm/jbpm4/jbpm-pvm/4.4/jbpm-pvm-4.4-sources.jar!/org/jbpm/pvm/internal/model/ExecutionImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="85" column="22" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="26" />
-              <folding>
-                <element signature="e#32592#32593#0" expanded="true" />
-                <element signature="e#32654#32655#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JAVA/org.jbpm.pvm.internal.model.ExecutionImpl" pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/org.jbpm.pvm.internal.model.ExecutionImpl">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>org.jbpm.pvm.internal.model.ExecutionImpl</OriginalElement>
-              <nodes>
-                <node x="483.1015625" y="400.0">org.jbpm.pvm.internal.model.ExecutionImpl</node>
-                <node x="574.25" y="240.0">org.jbpm.api.activity.ActivityExecution</node>
-                <node x="0.0" y="160.0">org.jbpm.api.ProcessInstance</node>
-                <node x="27.25" y="240.0">org.jbpm.api.model.OpenProcessInstance</node>
-                <node x="317.359375" y="160.0">org.jbpm.api.model.OpenExecution</node>
-                <node x="114.25" y="320.0">org.jbpm.pvm.internal.client.ClientProcessInstance</node>
-                <node x="216.296875" y="80.0">org.jbpm.api.Execution</node>
-                <node x="648.75" y="80.0">org.jbpm.pvm.internal.model.ScopeInstanceImpl</node>
-                <node x="220.25" y="240.0">org.jbpm.pvm.internal.client.ClientExecution</node>
-                <node x="375.25" y="240.0">org.jbpm.api.listener.EventListenerExecution</node>
-                <node x="355.9609375" y="0.0">java.io.Serializable</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="org.jbpm.pvm.internal.client.ClientExecution" target="org.jbpm.api.model.OpenExecution">
-                  <point x="0.0" y="-15.0" />
-                  <point x="287.75" y="220.0" />
-                  <point x="367.984375" y="220.0" />
-                  <point x="-16.875" y="15.0" />
-                </edge>
-                <edge source="org.jbpm.api.ProcessInstance" target="org.jbpm.api.Execution">
-                  <point x="0.0" y="-15.0" />
-                  <point x="70.5" y="135.0" />
-                  <point x="242.046875" y="135.0" />
-                  <point x="-25.75" y="15.0" />
-                </edge>
-                <edge source="org.jbpm.pvm.internal.client.ClientProcessInstance" target="org.jbpm.api.model.OpenProcessInstance">
-                  <point x="-43.25" y="-15.0" />
-                  <point x="157.5" y="295.0" />
-                  <point x="113.75" y="295.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="org.jbpm.api.activity.ActivityExecution" target="org.jbpm.api.model.OpenExecution">
-                  <point x="0.0" y="-15.0" />
-                  <point x="645.75" y="210.0" />
-                  <point x="435.484375" y="210.0" />
-                  <point x="50.625" y="15.0" />
-                </edge>
-                <edge source="org.jbpm.pvm.internal.model.ExecutionImpl" target="org.jbpm.pvm.internal.model.ScopeInstanceImpl">
-                  <point x="48.375" y="-15.0" />
-                  <point x="595.9765625" y="380.0" />
-                  <point x="727.75" y="380.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="org.jbpm.pvm.internal.model.ExecutionImpl" target="org.jbpm.api.listener.EventListenerExecution">
-                  <point x="-16.125" y="-15.0" />
-                  <point x="531.4765625" y="370.0" />
-                  <point x="464.75" y="370.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="org.jbpm.api.Execution" target="java.io.Serializable">
-                  <point x="0.0" y="-15.0" />
-                  <point x="267.796875" y="55.0" />
-                  <point x="384.4609375" y="55.0" />
-                  <point x="-28.5" y="15.0" />
-                </edge>
-                <edge source="org.jbpm.api.listener.EventListenerExecution" target="org.jbpm.api.model.OpenExecution">
-                  <point x="0.0" y="-15.0" />
-                  <point x="464.75" y="220.0" />
-                  <point x="401.734375" y="220.0" />
-                  <point x="16.875" y="15.0" />
-                </edge>
-                <edge source="org.jbpm.pvm.internal.model.ExecutionImpl" target="org.jbpm.pvm.internal.client.ClientProcessInstance">
-                  <point x="-48.375" y="-15.0" />
-                  <point x="499.2265625" y="380.0" />
-                  <point x="200.75" y="380.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="org.jbpm.api.model.OpenProcessInstance" target="org.jbpm.api.model.OpenExecution">
-                  <point x="43.25" y="-15.0" />
-                  <point x="157.0" y="210.0" />
-                  <point x="334.234375" y="210.0" />
-                  <point x="-50.625" y="15.0" />
-                </edge>
-                <edge source="org.jbpm.api.model.OpenExecution" target="org.jbpm.api.Execution">
-                  <point x="0.0" y="-15.0" />
-                  <point x="384.859375" y="135.0" />
-                  <point x="293.546875" y="135.0" />
-                  <point x="25.75" y="15.0" />
-                </edge>
-                <edge source="org.jbpm.api.model.OpenProcessInstance" target="org.jbpm.api.ProcessInstance">
-                  <point x="-43.25" y="-15.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="org.jbpm.pvm.internal.model.ExecutionImpl" target="org.jbpm.api.activity.ActivityExecution">
-                  <point x="16.125" y="-15.0" />
-                  <point x="563.7265625" y="370.0" />
-                  <point x="645.75" y="370.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="org.jbpm.pvm.internal.client.ClientProcessInstance" target="org.jbpm.pvm.internal.client.ClientExecution">
-                  <point x="43.25" y="-15.0" />
-                  <point x="244.0" y="295.0" />
-                  <point x="287.75" y="295.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="org.jbpm.pvm.internal.model.ScopeInstanceImpl" target="java.io.Serializable">
-                  <point x="0.0" y="-15.0" />
-                  <point x="727.75" y="55.0" />
-                  <point x="441.4609375" y="55.0" />
-                  <point x="28.5" y="15.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="147.0" y="271.0" />
-              <SelectedNodes>
-                <node>org.jbpm.pvm.internal.model.ExecutionImpl</node>
-                <node>java.io.Serializable</node>
-              </SelectedNodes>
-              <Categories />
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Execution.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jbpm/jbpm4/jbpm-api/4.4/jbpm-api-4.4-sources.jar!/org/jbpm/api/Execution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="209" column="6" selection-start-line="209" selection-start-column="6" selection-end-line="209" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.jpdl.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/test.jpdl.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uniqueElement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/code/repository/study/goodcode/uniqueElement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="-8">
+              <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskService.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jbpm/jbpm4/jbpm-api/4.4/jbpm-api-4.4-sources.jar!/org/jbpm/api/TaskService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="148" column="12" selection-start-line="148" selection-start-column="12" selection-end-line="148" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -250,8 +65,10 @@
         <option value="$PROJECT_DIR$/src/test/java/jbpm.cfg.xml" />
         <option value="$PROJECT_DIR$/src/test/java/jbpm.hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/test/java/test.jpdl.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/code/repository/study/goodcode/uniqueElement.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/code/repository/JbpmTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/code/repository/study/goodcode/uniqueElement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/code/repository/study/goodcode/UniqueElement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/code/repository/study/jbpm/JbpmSimple.java" />
       </list>
     </option>
   </component>
@@ -287,7 +104,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -351,7 +168,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="repository" type="462c0819:PsiDirectoryNode" />
               <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="goodcode" type="462c0819:PsiDirectoryNode" />
+              <item name="jbpm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codeRepository" type="b2602c69:ProjectViewProjectNode" />
@@ -381,36 +198,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="codeRepository" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="codeRepository" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.jbpm.jbpm4:jbpm-api:4.4" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="codeRepository" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.jbpm.jbpm4:jbpm-api:4.4" type="70bed36:NamedLibraryElementNode" />
-              <item name="jbpm-api-4.4.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codeRepository" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.jbpm.jbpm4:jbpm-api:4.4" type="70bed36:NamedLibraryElementNode" />
-              <item name="jbpm-api-4.4.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codeRepository" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.jbpm.jbpm4:jbpm-api:4.4" type="70bed36:NamedLibraryElementNode" />
-              <item name="jbpm-api-4.4.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -429,18 +216,19 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\icode\codeRepository\src\test\java" />
-      <recent name="E:\icode\codeRepository\src\main\resources" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\icode\codeRepository\src\main\resources" />
+      <recent name="E:\icode\codeRepository\src\main\java\com\code\repository\study\jbpm" />
       <recent name="E:\icode\codeRepository\src\test\java" />
       <recent name="E:\icode\codeRepository\src\test\java\com\code\repository" />
       <recent name="E:\icode\codeRepository\src" />
-      <recent name="E:\icode\codeRepository" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\icode\codeRepository\src\test\java" />
+      <recent name="E:\icode\codeRepository\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -455,7 +243,40 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JbpmTest.completeTask">
+  <component name="RunManager" selected="Application.JbpmSimple">
+    <configuration name="CharTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.code.repository.util.CharTest" />
+      <module name="codeRepository" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.code.repository.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="JbpmSimple" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.code.repository.study.jbpm.JbpmSimple" />
+      <module name="codeRepository" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.code.repository.study.jbpm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="UniqueElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.code.repository.study.goodcode.UniqueElement" />
+      <module name="codeRepository" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.code.repository.study.goodcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -482,29 +303,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="JbpmTest.createInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="codeRepository" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.code.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.code.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.code.repository.JbpmTest" />
-      <option name="METHOD_NAME" value="createInstance" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration name="JbpmTest.fetchTaskVariable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="codeRepository" />
       <extension name="coverage">
@@ -518,52 +316,6 @@
       <option name="PACKAGE_NAME" value="com.code.repository" />
       <option name="MAIN_CLASS_NAME" value="com.code.repository.JbpmTest" />
       <option name="METHOD_NAME" value="fetchTaskVariable" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="JbpmTest.findMyTaskList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="codeRepository" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.code.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.code.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.code.repository.JbpmTest" />
-      <option name="METHOD_NAME" value="findMyTaskList" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="JbpmTest.mytest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="codeRepository" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.code.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.code.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.code.repository.JbpmTest" />
-      <option name="METHOD_NAME" value="mytest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -617,20 +369,20 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.JbpmTest.createInstance" />
-      <item itemvalue="JUnit.JbpmTest.findMyTaskList" />
       <item itemvalue="JUnit.JbpmTest.completeTask" />
       <item itemvalue="JUnit.JbpmTest.fetchTaskVariable" />
-      <item itemvalue="JUnit.JbpmTest.mytest" />
       <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Application.CharTest" />
+      <item itemvalue="Application.UniqueElement" />
+      <item itemvalue="Application.JbpmSimple" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JbpmSimple" />
+        <item itemvalue="Application.UniqueElement" />
+        <item itemvalue="Application.CharTest" />
         <item itemvalue="JUnit.JbpmTest.completeTask" />
         <item itemvalue="JUnit.JbpmTest.fetchTaskVariable" />
-        <item itemvalue="JUnit.JbpmTest.mytest" />
-        <item itemvalue="JUnit.JbpmTest.createInstance" />
-        <item itemvalue="JUnit.JbpmTest.findMyTaskList" />
       </list>
     </recent_temporary>
   </component>
@@ -647,14 +399,11 @@
       <workItem from="1527264168048" duration="52000" />
       <workItem from="1527264245081" duration="1020000" />
       <workItem from="1527344285268" duration="19753000" />
-      <workItem from="1528518552756" duration="6149000" />
+      <workItem from="1528518552756" duration="8386000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JbpmTest_mytest - 2018.06.09 at 18h 57m 39s.xml">
-      <configuration name="JbpmTest.mytest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="JbpmTest_fetchTaskVariable - 2018.06.09 at 19h 02m 49s.xml">
       <configuration name="JbpmTest.fetchTaskVariable" configurationId="JUnit" />
     </history-entry>
@@ -682,13 +431,15 @@
     <history-entry file="JbpmTest_completeTask - 2018.06.09 at 19h 31m 19s.xml">
       <configuration name="JbpmTest.completeTask" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="JbpmTest_completeTask - 2018.06.09 at 19h 31m 49s.xml">
+      <configuration name="JbpmTest.completeTask" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26974000" />
+    <option name="totallyTimeSpent" value="29211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -697,11 +448,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32784185" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.080937974" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21782178" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.60033166" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.46369636" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.7993367" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.098335855" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22087745" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.64026403" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -762,28 +513,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/main.iml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/code/repository/study/io/InputStreamReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/banner.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="53" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -887,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jbpm/jbpm4/jbpm-api/4.4/jbpm-api-4.4-sources.jar!/org/jbpm/api/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1226">
-          <caret line="125" column="59" lean-forward="true" selection-start-line="125" selection-start-column="59" selection-end-line="125" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/jbpm.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -987,16 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="892" column="31" selection-start-line="892" selection-start-column="18" selection-end-line="892" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/code/repository/study/goodcode/uniqueElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1197,7 +909,7 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/jbpm/jbpm4/jbpm-pvm/4.4/jbpm-pvm-4.4-sources.jar!/org/jbpm/pvm/internal/model/ExecutionImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="85" column="22" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="26" />
+          <caret line="85" column="22" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="26" />
           <folding>
             <element signature="e#32592#32593#0" expanded="true" />
             <element signature="e#32654#32655#0" expanded="true" />
@@ -1232,13 +944,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/code/repository/util/CharTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/code/repository/JbpmTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="85" column="32" lean-forward="true" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
+        <state relative-caret-position="421">
+          <caret line="90" column="5" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="90" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1273#1289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/code/repository/study/jbpm/jbpm.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jbpm.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/code/repository/study/goodcode/UniqueElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#213#221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jbpm/jbpm4/jbpm-api/4.4/jbpm-api-4.4-sources.jar!/org/jbpm/api/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="121" column="30" selection-start-line="121" selection-start-column="30" selection-end-line="121" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/code/repository/study/jbpm/JbpmSimple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
