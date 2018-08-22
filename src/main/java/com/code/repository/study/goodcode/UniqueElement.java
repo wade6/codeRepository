@@ -4,6 +4,9 @@ package com.code.repository.study.goodcode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 判断元素是否唯一
+ */
 public class UniqueElement {
 
     public static void main(String[] args){
@@ -16,8 +19,6 @@ public class UniqueElement {
     }
 
     public static void uniqueElement(List<Object> list) {
-        list.add("12");
-        list.add("12");
         int size = list.size();
         if (size==0) {
             System.out.println("===> list is null");
