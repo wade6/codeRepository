@@ -1,5 +1,6 @@
 package com.code.repository.study.io;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -14,7 +15,8 @@ public class FileInputStreamTest {
 		FileInputStream fis = null;
 		try {
 			// 创建字节文件输入流
-			fis = new FileInputStream("fileInputStream.txt");
+			System.out.println(new File(".").getAbsolutePath());//相对工程目录
+			fis = new FileInputStream("src/main/resources/fileInputStream.txt");
 			// 最多读64字节
 			byte[] b = new byte[64];
 			// 实际读取字节数
