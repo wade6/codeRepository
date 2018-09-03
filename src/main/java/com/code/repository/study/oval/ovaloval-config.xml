@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<oval
+  xmlns="http://oval.sf.net/oval-configuration"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://oval.sf.net/oval-configuration http://oval.sourceforge.net/oval-configuration.xsd">
+  
+  <!-- define a constraint set -->
+  <constraintSet id="test.number">
+    <notNull />
+    <matchPattern>
+      <pattern pattern="^[a-z0-9]{8}$" flags="0" />
+    </matchPattern>
+  </constraintSet>
+
+  <!-- define checks for the  class -->
+  <!-- overwrite=false means already defined checks for this class will not be removed -->
+  <class type="com.alibaba.webx.study.oval.OvalXmlTest" overwrite="false" applyFieldConstraintsToSetter="true">
+
+    <field name="name">
+      <length min="0" max="3" />
+    </field>
+
+     
+    
+    <!-- define constructor parameter checks -->
+    <constructor>
+      <!-- parameter1 -->
+      <parameter type="java.lang.String">
+        <notNull />
+      </parameter>
+
+      <!-- parameter 2 -->
+      <!-- the types of all parameters must be listed, even if no checks are defined -->
+      <parameter type="java.lang.Long" />
+    </constructor>
+
+    <!-- define method parameter checks -->
+    <method name="setNumber">
+      <!-- parameter 1 -->
+      <parameter type="long">
+        <notNull />
+      </parameter>
+     </method>
+     
+  </class>
+  
+  
+</oval>
