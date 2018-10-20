@@ -2,6 +2,7 @@ package com.code.repository.util;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.math.BigDecimal;
 import java.text.Format;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -143,7 +144,6 @@ public class DateUtil {
     /**
      * ????????
      *
-     * @param dateStr 2011-01-01 00:00:00
      * @return 2011-01-02 00:00:00
      */
     public static Date getNextDay(Date date) {
@@ -409,16 +409,69 @@ public class DateUtil {
 		monthList.add(map);
 		return monthList;
 	}
+
+	/**
+	 * 默认时间之前几天
+	 *
+	 * @since 2016年9月11日
+	 * @param beforeDate
+	 * @param days
+	 * @return
+	 */
+	public static Date dateBefore(Date beforeDate, int days) {
+		java.util.Date date = beforeDate;
+		try {
+			long Time = (date.getTime() / 1000) - 60 * 60 * 24 * days;
+			date.setTime(Time * 1000);
+		} catch (Exception e) {
+			return null;
+		}
+		return date;
+	}
+
+	private static final SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd 00:00:00");
+
+	public static Date toDayBegin(Date date) {
+		if (date == null) {
+			return null;
+		}
+		try {
+			return f.parse(f.format(date));
+		} catch (ParseException e) {
+			return null;
+		}
+	}
 	
 	public static void main(String[] args) {
-		String start = "2013-01-01 20:00:00";
-		String end = "2013-03-11 12:03:40";
-		
-		List<Map<String,Object>> list = getStartEndDateByMonth(parseYyyyMMddHHmmss(start),parseYyyyMMddHHmmss(end));
-		for(Map m : list){
-			System.out.println(formatDate((Date) m.get("start"))+" ##"+formatDate((Date) m.get("end")));
-		}
-		System.out.println(123);
+
+//		System.out.println(DateUtil.toDayBegin(new Date()));
+//		String start = "2013-01-01 20:00:00";
+//		String end = "2013-03-11 12:03:40";
+//
+//		List<Map<String,Object>> list = getStartEndDateByMonth(parseYyyyMMddHHmmss(start),parseYyyyMMddHHmmss(end));
+//		for(Map m : list){
+//			System.out.println(formatDate((Date) m.get("start"))+" ##"+formatDate((Date) m.get("end")));
+//		}
+//		System.out.println(123);
+
+		Date ss = DateUtil.dateBefore(new Date(),4);
+		Date ss1 = DateUtil.dateBefore(new Date(),2);
+		System.out.println(ss);
+		System.out.println(ss1);
+		System.out.println(ss.getTime());
+		System.out.println(ss1.getTime());
+		Set<String>
+//
+//		String num = "51696521212.230";
+//		System.out.println(Float.valueOf(num).intValue());
+//		System.out.println(Math.ceil(Double.valueOf(num).longValue()));
+//		BigDecimal b = new BigDecimal(Double.valueOf(num).longValue());
+//		System.out.println(b.toString());
+//		System.out.println(DateUtil.dateBefore(new Date(),7).getTime());
+
+//		String ss = "[2]电子口岸申报中,desc: 清单新增申报成功[电商企业编码：3301968FU0订单编号：223299468117755430],操作人：sys";
+//		System.out.println(ss.length());
+//		System.out.println(ss.substring(0,200));
 	}
     
 }

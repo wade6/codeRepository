@@ -21,12 +21,31 @@ import java.util.*;
 // link访问测试
 public class HttpClientTest {
 	
+//	public static void main(String[] args) throws  NoSuchAlgorithmException, UnsupportedEncodingException {
+//
+//		Map<String, String> params = new HashMap<String, String>();
+//		params.put("bizType", "MSG_DIRECT_EXPORT_CALLBACK_BIZ_TYPE");
+//		params.put("formatType", "1");
+//		params.put("bizKey", "LP00096553139264");
+//
+//		// content内容
+//		JSONObject json = new JSONObject();
+//		json.put("orderCode", "LP00096553139264");
+//		json.put("optTime", "2018-04-02 14:33:12");
+//		json.put("status", "123");
+//
+//		params.put("content", json.toJSONString());
+//        params.put("dataDigest", HttpClientTest.doSign(json.toJSONString(), "UTF-8", "123"));
+//
+//		String url = "https://linkdaily.tbsandbox.com/gateway/custom/customsCommonPlgin?msg_type=GLOBAL_CUSTOMS_DECLARE_CALLBACK&from_code=hzdirect_001";
+//		System.out.println("服务器的响应是:"+HttpClientTest.doPost(url, params));
+//	}
+
 	public static void main(String[] args) throws  NoSuchAlgorithmException, UnsupportedEncodingException {
-		
+
 		Map<String, String> params = new HashMap<String, String>();
-		params.put("bizType", "MSG_DIRECT_EXPORT_CALLBACK_BIZ_TYPE");
-		params.put("formatType", "1");
-		params.put("bizKey", "LP00096553139264");
+		params.put("msg_type", "CBE_GA_CLEARANCE_RESULT_CALLBACK");
+		params.put("logistic_provider_id", "test9610");
 
 		// content内容
 		JSONObject json = new JSONObject();
@@ -34,10 +53,10 @@ public class HttpClientTest {
 		json.put("optTime", "2018-04-02 14:33:12");
 		json.put("status", "123");
 
-		params.put("content", json.toJSONString());
-        params.put("dataDigest", HttpClientTest.doSign(json.toJSONString(), "UTF-8", "123"));
+		params.put("logistics_interface", "{\"clearanceResultContent\":{\"mfCode\":\"CB10000010074552\",\"copCode\":\"CB10000010074551\",\"content\":[\"1,0,2\"],\"waybillNo\":\"UA048852166HK\",\"status\":\"2\"}}");
+		params.put("data_digest", HttpClientTest.doSign(json.toJSONString(), "UTF-8", "123"));
 
-		String url = "https://linkdaily.tbsandbox.com/gateway/custom/customsCommonPlgin?msg_type=GLOBAL_CUSTOMS_DECLARE_CALLBACK&from_code=hzdirect_001";
+		String url = "https://linkdaily.tbsandbox.com/gateway/pac_message_receiver.do";
 		System.out.println("服务器的响应是:"+HttpClientTest.doPost(url, params));
 	}
 	

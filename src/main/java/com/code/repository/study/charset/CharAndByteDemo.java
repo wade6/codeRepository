@@ -8,11 +8,11 @@ package com.code.repository.study.charset;
 public class CharAndByteDemo {
 	
 	public static void main(String[] args) {
-		char a = '中';
-		byte[] b = CharAndByteDemo.charToByte(a);
-		System.out.println("b0: " + b[0]);
-		System.out.println("b1: " + b[1]);
-		System.out.println("byte[] to char: " + CharAndByteDemo.byteToChar(b));
+//		char a = '中';
+//		byte[] b = CharAndByteDemo.charToByte(a);
+//		System.out.println("b0: " + b[0]);
+//		System.out.println("b1: " + b[1]);
+//		System.out.println("byte[] to char: " + CharAndByteDemo.byteToChar(b));
 	}
 	
 	/**
