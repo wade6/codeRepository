@@ -421,7 +421,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32784185" />
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.21104388" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3492605" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.5767918" />

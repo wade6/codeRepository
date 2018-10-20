@@ -1,5 +1,7 @@
 package com.code.repository.study.jdbc;
 
+import com.mysql.jdbc.Driver;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -27,25 +29,24 @@ public class JdbcDemo {
         Connection conn = null;
         try {
             // 加载MySQL的数据驱动程序
-            Class.forName("com.mysql.jdbc.Driver");
+//            Class.forName("com.mysql.jdbc.Driver"); // jdk1.6 之后可以不用再调用这句
+//            DriverManager.registerDriver(new Driver());
             // 创建数据连接对象
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "root");
             // 创建Statement对象
             Statement statement = conn.createStatement();
-
-            // 执行一条sql
+            // 执行sql
             // 通过execuUpdate()方法用来数据的更新，包括插入和删除等操；
-            // 通过xecuteQuery()方法进行数据的查询，而查询结果会得到 ResulSet对象
-            statement.executeUpdate( "INSERT INTO user(gmt_create, gmt_modified,user_name)" + " VALUES (now(),now(),'jdbcTest') ") ;
+            String userName = "tst"+ System.currentTimeMillis();
+            statement.executeUpdate( "INSERT INTO user(gmt_create, gmt_modified,user_name)" + " VALUES (now(),now(),'"+userName+"') ") ;
+            // 通过executeQuery()方法进行数据的查询，而查询结果会得到 ResulSet对象
             ResultSet resultSel = statement.executeQuery( "select * from user" );
             while(resultSel.next()){
                 String username = resultSel.getString("user_name");
-                System.out.println(username);
+                System.out.println("userName:"+username);
             }
             conn.close();
-        } catch (ClassNotFoundException e) {
-            System.out.println(e);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.out.println(e);
         }finally{
             if(conn!=null){
