@@ -11,7 +11,6 @@ import java.util.Set;
 
 public class JbpmSimple {
 
-
     public static void main(String[] args){
 
         JbpmSimple.deploy();

@@ -1,0 +1,49 @@
+<html>
+<head>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+        //alert('Hello, world');
+        function abs(){
+            console.log("this is a function!")
+        }
+
+        var a2 = function (a,b,c) {
+            for(var e of arguments){
+                console.log(e);
+            }
+            console.log("this is a2")
+        };
+
+
+
+        var person = {
+            name: 'Bob',
+            age: 20,
+            tags: ['js', 'web', 'mobile'],
+            city: 'Beijing',
+            hasCar: true,
+            zipcode: null
+        };
+        console.log("age:"+person.age)
+        console.log("===")
+        var a = ['A', 'B', 'C'];
+        a.forEach(function (e,index,array) {
+            console.log("e:"+e);
+            console.log("index:"+index);
+            console.log("array:"+array)
+        });
+        console.log("===")
+        abs();
+        console.log("===")
+        a2(1,2,3,4);
+        console.log("===")
+        a3(1,2);
+
+
+
+    </script>
+</head>
+<body>
+this is body
+</body>
+</html>
