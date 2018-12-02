@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="Definitions_1nzip0i" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.14.0">
+  <bpmn:process id="Process_3" isExecutable="true">
+    <bpmn:sequenceFlow id="SequenceFlow_01kucko" name="通过" sourceRef="submit_l2" targetRef="EndEvent_1qtl5sn" />
+    <bpmn:sequenceFlow id="SequenceFlow_0m1q0y3" name="提交到经理" sourceRef="submit_l1" targetRef="submit_l2" />
+    <bpmn:sequenceFlow id="SequenceFlow_0qizrrt" name="提交到组长" sourceRef="StartEvent_1" targetRef="submit_l1" />
+    <bpmn:endEvent id="EndEvent_1qtl5sn" name="结束">
+      <bpmn:incoming>SequenceFlow_01kucko</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:userTask id="submit_l2" name="经理审批">
+      <bpmn:incoming>SequenceFlow_0m1q0y3</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_01kucko</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="submit_l1" name="组长审批">
+      <bpmn:incoming>SequenceFlow_0qizrrt</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0m1q0y3</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:startEvent id="StartEvent_1" name="开始">
+      <bpmn:outgoing>SequenceFlow_0qizrrt</bpmn:outgoing>
+    </bpmn:startEvent>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1">
+      <bpmndi:BPMNEdge id="SequenceFlow_0qizrrt_di" bpmnElement="SequenceFlow_0qizrrt">
+        <di:waypoint x="399" y="175" />
+        <di:waypoint x="399" y="218" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="387" y="191" width="55" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0m1q0y3_di" bpmnElement="SequenceFlow_0m1q0y3">
+        <di:waypoint x="399" y="298" />
+        <di:waypoint x="399" y="349" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="387" y="318" width="55" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_01kucko_di" bpmnElement="SequenceFlow_01kucko">
+        <di:waypoint x="399" y="429" />
+        <di:waypoint x="399" y="509" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="403" y="463" width="22" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="381" y="139" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="388" y="109" width="22" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_1fagygb_di" bpmnElement="submit_l1">
+        <dc:Bounds x="349" y="218" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_1hixbr3_di" bpmnElement="submit_l2">
+        <dc:Bounds x="349" y="349" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1qtl5sn_di" bpmnElement="EndEvent_1qtl5sn">
+        <dc:Bounds x="381" y="508.940620782726" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="389" y="549" width="22" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
