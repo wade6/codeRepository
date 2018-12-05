@@ -201,24 +201,24 @@
 		<dependency>
 			<groupId>org.activiti</groupId>
 			<artifactId>activiti-engine</artifactId>
-			<version>5.16</version>
+			<version>6.0.0</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.activiti</groupId>
 			<artifactId>activiti-bpmn-converter</artifactId>
-			<version>5.16</version>
+			<version>6.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.activiti</groupId>
 			<artifactId>activiti-bpmn-model</artifactId>
 			<version>6.0.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.activiti</groupId>
-			<artifactId>activiti-bpmn-layout</artifactId>
-			<version>5.16</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.activiti</groupId>-->
+			<!--<artifactId>activiti-bpmn-layout</artifactId>-->
+			<!--<version>6.0.0</version>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
@@ -226,11 +226,11 @@
 		</dependency>
 
 		<!-- activiti与spring整合依赖 -->
-		<dependency>
-			<groupId>org.activiti</groupId>
-			<artifactId>activiti-spring</artifactId>
-			<version>5.16</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.activiti</groupId>-->
+			<!--<artifactId>activiti-spring</artifactId>-->
+			<!--<version>6.0.0</version>-->
+		<!--</dependency>-->
 
 
 		<!-- slf4j -->

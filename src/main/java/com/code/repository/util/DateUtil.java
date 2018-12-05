@@ -1,6 +1,7 @@
 package com.code.repository.util;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.time.DateUtils;
 
 import java.math.BigDecimal;
 import java.text.Format;
@@ -410,6 +411,19 @@ public class DateUtil {
 		return monthList;
 	}
 
+	public static long getBetweenHours(Date start, Date end){
+		try {
+			if (start == null || end == null || start.getTime() > end.getTime()){
+				return 0;
+			}
+			long time = end.getTime() - start.getTime();
+			long hour = time / 1000 / (60 * 60);
+			return hour;
+		}catch (Exception e){
+			return 0;
+		}
+	}
+
 	/**
 	 * 默认时间之前几天
 	 *
@@ -444,6 +458,8 @@ public class DateUtil {
 	
 	public static void main(String[] args) {
 
+		toDayBegin(null);
+
 //		System.out.println(DateUtil.toDayBegin(new Date()));
 //		String start = "2013-01-01 20:00:00";
 //		String end = "2013-03-11 12:03:40";
@@ -453,13 +469,23 @@ public class DateUtil {
 //			System.out.println(formatDate((Date) m.get("start"))+" ##"+formatDate((Date) m.get("end")));
 //		}
 //		System.out.println(123);
+//
+//		Date ss = DateUtil.toDayBegin(DateUtil.dateBefore(new Date(),1));
+//
+//		Date ss1 = DateUtil.dateBefore(new Date(),0);
+//		System.out.println(ss);
+//		System.out.println(ss1);
+//		System.out.println(ss.getTime());
+//		System.out.println(ss1.getTime());
 
-		Date ss = DateUtil.dateBefore(new Date(),4);
-		Date ss1 = DateUtil.dateBefore(new Date(),2);
-		System.out.println(ss);
-		System.out.println(ss1);
-		System.out.println(ss.getTime());
-		System.out.println(ss1.getTime());
+
+		Date ss00 =DateUtil.parseYyyyMMddHHmmss("2018-11-11 12:20:00");
+		Date ss01 =DateUtil.parseYyyyMMddHHmmss("2018-11-12 12:00:00");
+
+		System.out.println(ss00.getTime());
+		System.out.println(ss01.getTime());
+
+
 //
 //		String num = "51696521212.230";
 //		System.out.println(Float.valueOf(num).intValue());
@@ -471,6 +497,36 @@ public class DateUtil {
 //		String ss = "[2]电子口岸申报中,desc: 清单新增申报成功[电商企业编码：3301968FU0订单编号：223299468117755430],操作人：sys";
 //		System.out.println(ss.length());
 //		System.out.println(ss.substring(0,200));
+//        System.out.println(DateUtil.class.getSimpleName());
+//
+//        Object we = null;
+//        System.out.println((String)we);
+
+//		List<Date> sdate = DateUtil.splitPayTime(ss00,ss01);
+//		System.out.println(sdate.size());
+//		for(Date date : sdate){
+//			System.out.println(date);
+//		}
+
+	}
+
+
+
+	public static  List<Date> splitPayTime(Date startTime, Date endTime) {
+		List<Date> payTimes = new ArrayList<>();
+		long hours = DateUtil.getBetweenHours(startTime, endTime);
+		if (hours < 1) {
+			return payTimes;
+		}
+		for (int i = 0; i < hours+1; i++) {
+			if (startTime.getTime() >= endTime.getTime()) {
+				return payTimes;
+			}
+			payTimes.add(startTime);
+			// 向后移动一个小时
+			startTime = DateUtils.addHours(startTime, 1);
+		}
+		return payTimes;
 	}
     
 }
