@@ -1,15 +1,39 @@
 package com.code.repository;
 
+import com.alibaba.fastjson.JSONObject;
+import com.code.repository.controller.HelloController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ImportResource;
 
 
 @SpringBootApplication // same as @Configuration @EnableAutoConfiguration @ComponentScan
+@ImportResource({ "classpath*:/bean.xml" })
+//@ComponentScan(basePackages = { "com.code.repository.spring.manager" })
 public class Application {
+
+	private static final Logger logger = LoggerFactory.getLogger(HelloController.class);
 
 	// http://127.0.0.1:8081/
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		ApplicationContext ctx = SpringApplication.run(Application.class,args);
+
+//		try{
+//			String[] beanNames = ctx.getBeanDefinitionNames();//所有的bean
+////			String[] beanNames = ctx.getBeanNamesForAnnotation(RestController.class);//所有添加该注解的bean
+//
+//			logger.error("total bean count :"+ ctx.getBeanDefinitionCount());
+//
+//			int i = 0;
+//			for (String str : beanNames) {
+//				logger.info("{},beanName:{}", ++i, str);// 打印所有加载的类
+//			}
+//		} catch(Exception e){
+//		}
 	}
 	
 //	@Bean

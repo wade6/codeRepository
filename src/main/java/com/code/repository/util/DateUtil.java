@@ -460,6 +460,15 @@ public class DateUtil {
 
 		toDayBegin(null);
 
+
+		String ss = "通关异常理_国检审单超时_广州";
+
+		System.out.println(ss.replace("通关异常处理_",""));
+
+
+
+
+
 //		System.out.println(DateUtil.toDayBegin(new Date()));
 //		String start = "2013-01-01 20:00:00";
 //		String end = "2013-03-11 12:03:40";
