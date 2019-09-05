@@ -37,7 +37,7 @@ public class HttpClientTest {
 //		params.put("content", json.toJSONString());
 //        params.put("dataDigest", HttpClientTest.doSign(json.toJSONString(), "UTF-8", "123"));
 //
-//		String url = "https://linkdaily.tbsandbox.com/gateway/custom/customsCommonPlgin?msg_type=GLOBAL_CUSTOMS_DECLARE_CALLBACK&from_code=hzdirect_001";
+//		String url = "https://pre-partner.customs.cainiao.com/robot/cbe";
 //		System.out.println("服务器的响应是:"+HttpClientTest.doPost(url, params));
 //	}
 
