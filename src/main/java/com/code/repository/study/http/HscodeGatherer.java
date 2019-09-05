@@ -1,6 +1,5 @@
 package com.code.repository.study.http;
 
-import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -18,16 +17,19 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
  * @Author zhaoyuan.lizy on 2019/9/5
  **/
 
-public class HscodeGatherer implements  Runnable{
+public class HscodeGatherer implements Runnable {
 
     private int start=0;
 
@@ -41,41 +43,48 @@ public class HscodeGatherer implements  Runnable{
 
     public static void main(String[] args){
 
-        ExecutorService executor = Executors.newCachedThreadPool();
+        // 多线程
+//        ExecutorService executor = Executors.newCachedThreadPool();
+//        try{
+//            executor.submit(new HscodeGatherer(62,63));
+//        } catch(Exception e){
+//        }
+
+        // 单线程
+        HscodeGatherer.fetchScope(62,62);
 
 
-        String url = "https://www.customs.gov.vn/SitePages/Tariff-Search.aspx?portlet=DetailsImportTax&language=en-US&code=";
-        String hscode = "62043300";
-        HscodeGatherer.generateCode(62,63);
-        // 爬取数据
+        // 单个code
+//        String url = "https://www.customs.gov.vn/SitePages/Tariff-Search.aspx?portlet=DetailsImportTax&language=en-US&code=";
+//        String hscode = "62043300";
 //        Map<String,String> result = HscodeGatherer.fetchInfo(url+hscode); // 爬取数据
 //        result.put("hscode",hscode); // 填充hscode
 //        System.out.println(JSON.toJSONString(result));
 //        HscodeGatherer.writeToFile(result);// 写文件
     }
 
-
     @Override
     public void run() {
-        this.generateCode(start,end);
+        this.fetchScope(start,end);
     }
 
-    private static String generateCode(int start,int end){ // 开头两位 01-97，一共8位
+    private static void fetchScope(int start, int end){ // 开头两位 01-97
         if(start<=0){
             start=1;
         }
-        if(end>99){
-            end=99;
+        if(end>97){
+            end=97;
         }
         int start1 = start;
         int start2 = 1;
         int start3 = 1;
         int start4 = 0;
         for(;start1<=end;start1++){
-            for(;start2 <=99;start2++){
+            for(;start2 <=97;start2++){
                 for(;start3 <=99;start3++){
-                    for(;start4 <=99;start4++){
+                    for(;start4 <=99;start4++){ // 生成8位
                         String hscode = HscodeGatherer.numToStr(start1)+HscodeGatherer.numToStr(start2)+HscodeGatherer.numToStr(start3)+HscodeGatherer.numToStr(start4);
+//                       String hscode = "62043300";
                         System.out.println("=====hscode:"+hscode);
                         String url = "https://www.customs.gov.vn/SitePages/Tariff-Search.aspx?portlet=DetailsImportTax&language=en-US&code=";
                         Map<String,String> result = HscodeGatherer.fetchInfo(url+hscode); // 爬取数据
@@ -83,19 +92,19 @@ public class HscodeGatherer implements  Runnable{
                             System.out.println("=====no result:");
                             continue;
                         }
+                        System.out.println("==================================ok:");
                         result.put("hscode",hscode); // 填充hscode
-                        System.out.println(JSON.toJSONString(result));
-                        HscodeGatherer.writeToFile(result);// 写文件
+//                        System.out.println(JSON.toJSONString(result));
+                        HscodeGatherer.writeToFile(result,start,end);// 写文件
                     }
                 }
             }
         }
-        return null;
     }
 
     // 写文件
-    private static void writeToFile(Map<String,String> result){
-        String fileName = "D:\\hscodeTH.txt";
+    private static void writeToFile(Map<String,String> result,int start, int end){
+        String fileName = "D:\\hscodeTH"+start+"_"+end+".txt";
         BufferedWriter out = null;
         try {
             OutputStreamWriter ow = new OutputStreamWriter(new FileOutputStream(new File(fileName),true),"UTF-8");
