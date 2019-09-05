@@ -3,7 +3,6 @@ package com.code.repository.study.proxy.dynamicproxy;
 
 import com.code.repository.study.proxy.Action;
 import com.code.repository.study.proxy.Action1Impl;
-import com.code.repository.study.proxy.Action2Impl;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -67,25 +66,49 @@ public class DynamicProxy implements InvocationHandler {
         if(method.getName().equals("doAction")){
             System.out.println("    ---只有调用doAction才出现");
         }
-        //执行方法  
+        //执行方法
+
         result = method.invoke(target, args);
         System.out.println("+++调用之后！\n");
         return result;
     }
 
     public static void main(String[] args) {
-        // 初始化动态代理类
-        DynamicProxy dynamicProxy = new DynamicProxy();
-        
-        // 生成Action1的一个代理
-        Action actionProxy = (Action) dynamicProxy.bind(new Action1Impl());
-        // 执行代理
+//        // 初始化动态代理类
+//        DynamicProxy dynamicProxy = new DynamicProxy();
+//
+//        // 生成Action1的一个代理
+//        Action actionProxy = (Action) dynamicProxy.bind(new Action1Impl());
+//        // 执行代理
+//        actionProxy.doAction();
+//
+//        // 生成Action2的一个代理
+//        actionProxy = (Action) dynamicProxy.bind(new Action2Impl());
+//        // 执行代理
+//        actionProxy.doOther();
+
+
+        Action1Impl action = new Action1Impl();// 初始化被代理 业务类
+
+        Action actionProxy = (Action) Proxy.newProxyInstance(
+                action.getClass().getClassLoader(),
+                action.getClass().getInterfaces(),
+                new InvocationHandler() {
+                    @Override
+                    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+                        Object result = null;
+                        System.out.println("---调用之前！");
+                        if (method.getName().equals("doAction")) {
+                            System.out.println("    ---只有调用doAction才出现");
+                        }
+                        //执行方法
+                        result = method.invoke(action, args);
+                        System.out.println("+++调用之后！\n");
+                        return result;
+                    }
+                });// 生成动态代理类
+
         actionProxy.doAction();
-        
-        // 生成Action2的一个代理
-        actionProxy = (Action) dynamicProxy.bind(new Action2Impl());
-        // 执行代理
-        actionProxy.doOther();
     }
 
 }

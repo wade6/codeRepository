@@ -37,6 +37,18 @@
 	</repositories>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.7.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.htmlparser</groupId>
+			<artifactId>htmlparser</artifactId>
+			<version>1.6</version>
+		</dependency>
         <!-- 微软office处理 api -->
         <dependency>
             <groupId>org.apache.poi</groupId>
@@ -201,24 +213,24 @@
 		<dependency>
 			<groupId>org.activiti</groupId>
 			<artifactId>activiti-engine</artifactId>
-			<version>5.16</version>
+			<version>6.0.0</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.activiti</groupId>
 			<artifactId>activiti-bpmn-converter</artifactId>
-			<version>5.16</version>
+			<version>6.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.activiti</groupId>
 			<artifactId>activiti-bpmn-model</artifactId>
 			<version>6.0.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.activiti</groupId>
-			<artifactId>activiti-bpmn-layout</artifactId>
-			<version>5.16</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.activiti</groupId>-->
+			<!--<artifactId>activiti-bpmn-layout</artifactId>-->
+			<!--<version>6.0.0</version>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
@@ -226,11 +238,11 @@
 		</dependency>
 
 		<!-- activiti与spring整合依赖 -->
-		<dependency>
-			<groupId>org.activiti</groupId>
-			<artifactId>activiti-spring</artifactId>
-			<version>5.16</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.activiti</groupId>-->
+			<!--<artifactId>activiti-spring</artifactId>-->
+			<!--<version>6.0.0</version>-->
+		<!--</dependency>-->
 
 
 		<!-- slf4j -->
