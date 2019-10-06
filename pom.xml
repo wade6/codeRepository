@@ -38,6 +38,14 @@
 
 	<dependencies>
 
+		<!-- rabbit mq -->
+		<dependency>
+			<groupId>com.rabbitmq</groupId>
+			<artifactId>amqp-client</artifactId>
+			<version>5.1.2</version>
+		</dependency>
+		<!-- rabbit mq end -->
+
 		<dependency>
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>

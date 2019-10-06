@@ -38,8 +38,8 @@ public class HscodeGatherer implements Callable<List<Map<String,String>>> {
         this.hscode4 = hscode4;
     }
 
-    private static int corePoolSize = 20;  // 主流线程个数
-    private static int maximumPoolSize = 50; // 线程最大个数
+    private static int corePoolSize = 50;  // 主流线程个数
+    private static int maximumPoolSize = 100; // 线程最大个数
     private static long keepAliveTime = 1000L; // 大于主流线程个数的线程空闲的过期时间  wait for new tasks before terminating
     private static TimeUnit unit = TimeUnit.MILLISECONDS; // 时间单元
     private static BlockingQueue<Runnable> workQueue = new LinkedBlockingQueue<Runnable>(); // 工作队列，有三种类SynchronousQueue、LinkedBlockingQueue(在所有 corePoolSize 线程都忙时新任务在队列中等待,maximumPoolSiz失效)、ArrayBlockingQueue，分别对应同步队列、无界队列、有界队列。
