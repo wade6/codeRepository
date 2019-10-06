@@ -52,10 +52,10 @@ public class HscodeGatherer implements Callable<List<Map<String,String>>> {
 //        // 多线程
         ArrayList<Future<List<Map<String, String>>>> results = new ArrayList<Future<List<Map<String, String>>>>();
         try{
-            int start1=1;
-            for(;start1<=97;start1++) {
-                int start2=1;
-                for (; start2 <= 99; start2++) {
+            int start1=81;
+            for(;start1<=99;start1++) {
+                int start2=9;
+                for (; start2 <= 9; start2++) {
                     String hscode4 = HscodeGatherer.numToStr(start1)+HscodeGatherer.numToStr(start2);
                     System.out.println(hscode4);
                     results.add(executorPool.submit(new HscodeGatherer(hscode4)));
@@ -87,7 +87,7 @@ public class HscodeGatherer implements Callable<List<Map<String,String>>> {
 
 
     private static String numToStr(int num){
-        if(num<9){
+        if(num<=9){
             return "0"+num;
         }else{
             return String.valueOf(num);
