@@ -105,11 +105,6 @@
 			<artifactId>oval</artifactId>
 			<version>1.81</version>
 		</dependency>
-		<dependency>
-			<groupId>com.alibaba.external</groupId>
-			<artifactId>xml.xstream</artifactId>
-			<version>1.3.1</version>
-		</dependency>
 		<!-- 数据验证框架 end-->
 
         <dependency>
@@ -222,7 +217,6 @@
 			<groupId>org.activiti</groupId>
 			<artifactId>activiti-engine</artifactId>
 			<version>6.0.0</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.activiti</groupId>
