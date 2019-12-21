@@ -26,10 +26,10 @@ public class ActivitiInside {
 
     public static void main(String[] args) throws XMLStreamException {
 
-        String filePath="";
-        String processId="test1";
+        String filePath="E:/icode/codeRepository/activitiInside.bpmn";
+        String processId="Process_1";
         Map<String,Object> variables = new HashMap<>();
-        variables.put("name","tt");
+        variables.put("name","1");
         // 加载流程文件 BPMN标准
         InputStream fileinputStream = loadFile(filePath);
         // 装载BPMN模型
@@ -46,6 +46,7 @@ public class ActivitiInside {
         for(FlowElement flowElement : flowList){
             if(flowElement instanceof StartEvent){ // 开始节点
                 startEvent = (StartEvent) flowElement;
+                break;
             }
             if(flowElement instanceof SubProcess){ // 子流程
                 subProcess = (SubProcess) flowElement;
@@ -53,11 +54,14 @@ public class ActivitiInside {
         }
 
         // 获取后续节点
-        getNextEvent(startEvent.getId(),process,variables);
+        String nextId = getNextEvent(startEvent.getId(),process,variables);
+        while(nextId !=null){
+            nextId = getNextEvent(nextId,process,variables);
+        }
     }
 
     // 获取后续节点
-    private static void getNextEvent(String eventId,Process process,Map<String,Object> variables){
+    private static String getNextEvent(String eventId,Process process,Map<String,Object> variables){
         FlowElement nowflowElement = process.getFlowElement(eventId);
         FlowNode flowNode = (FlowNode) nowflowElement;
         List<SequenceFlow> nextFlows = flowNode.getOutgoingFlows();// 连接线
@@ -76,13 +80,16 @@ public class ActivitiInside {
             String elementId = sequenceFlow.getTargetRef(); // 任务节点，打印任务参数
             FlowElement flowElement = process.getFlowElement(elementId);
             if(flowElement instanceof Task){
+                Task task = (Task)flowElement;
                 //捞取节点参数
-//                flowElement.getExtensionElements().get("property");
-                String name = flowElement.getAttributeValue(null,"name");
-                String value =flowElement.getAttributeValue(null,"value");
+                List<ExtensionElement> list = task.getExtensionElements().get("properties");
+                String name = task.getAttributeValue(null,"name");
+                String value =task.getAttributeValue(null,"value");
                 System.out.println("name:"+name+",value:"+value);
+                return elementId;
             }
         }
+        return null;
     }
 
     private static InputStream loadFile(String filePath){
