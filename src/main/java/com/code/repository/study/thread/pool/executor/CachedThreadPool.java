@@ -2,9 +2,9 @@
  * Project: study
  * File Created at 2013-5-19下午3:56:20
  */
-package com.code.repository.study.thread.executor;
+package com.code.repository.study.thread.pool.executor;
 
-import com.code.repository.study.thread.Fibonacci;
+import com.code.repository.study.math.Fibonacci;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

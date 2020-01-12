@@ -2,10 +2,12 @@
  * Project: study
  * File Created at 2013-5-19下午3:30:56
  */
-package com.code.repository.study.thread;
+package com.code.repository.study.math;
 
 /**
  * 斐波那契数列  f(n) = f(n-1) + f(n-2)
+ * F(1)=1，F(2)=1, F(n)=F(n-1)+F(n-2)
+ * 1、1、2、3、5、8、13、21、34 ....
  * 
  * @author zhaoyuanli
  * 2013-5-19下午3:30:56
@@ -48,7 +50,6 @@ public class Fibonacci implements Runnable {
     
     public static void main(String[] args) {
         Fibonacci f = new Fibonacci(5);
-        
         Thread t1 = new Thread(f,"t1:");
         t1.start();
         System.out.println("ok!");

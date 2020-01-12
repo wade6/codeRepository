@@ -2,7 +2,7 @@
  * Project: study
  * File Created at 2013-5-19下午4:42:01
  */
-package com.code.repository.study.thread.daemon;
+package com.code.repository.study.thread.impl;
 
 import java.util.concurrent.TimeUnit;
 

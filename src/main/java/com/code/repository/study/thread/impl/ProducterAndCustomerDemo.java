@@ -1,4 +1,4 @@
-package com.code.repository.study.thread.algorithm;
+package com.code.repository.study.thread.impl;
 
 /**
  * 生产者消费者同步算法<p>

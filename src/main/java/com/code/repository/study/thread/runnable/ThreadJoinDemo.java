@@ -1,4 +1,4 @@
-package com.code.repository.study.thread;
+package com.code.repository.study.thread.runnable;
 
 /**
  * join方法的功能就是使异步执行的线程变成同步执行<p>
@@ -48,8 +48,6 @@ public class ThreadJoinDemo {
         for(int i=0;i<3;i++){
             ts[i].join();
         }
-
-        
         System.out.println("main end："+ IncDemo.total);
     }
     

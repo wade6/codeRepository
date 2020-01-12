@@ -1,4 +1,4 @@
-package com.code.repository.study.thread.algorithm;
+package com.code.repository.study.thread.impl;
 
 /**
  * 建立三个线程，A线程打印10次A，B线程打印10次B,C线程打印10次C，要求线程同时运行，交替打印10次ABC
