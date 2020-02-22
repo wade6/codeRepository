@@ -27,7 +27,7 @@ public class SenderMQ {
     private static String QUEUE_NAME = "q1";
     private static String EXCHANGE = "hm.direct";
 
-    public static void main(String[] args) throws IOException, TimeoutException {
+    public static void main(String[] args) throws IOException, TimeoutException, InterruptedException {
         // connection是socket连接的抽象，并且为我们管理协议版本协商（protocol version negotiation），
         // 认证（authentication ）等等事情。这里我们要连接的消息代理在本地，因此我们将host设为“localhost”。
         // 如果我们想连接其他机器上的代理，只需要将这里改为特定的主机名或IP地址。
@@ -49,7 +49,14 @@ public class SenderMQ {
         for(int i=0;i<30;i++){
             String message = "this is the "+i+" message!";
             channel.basicPublish(EXCHANGE, QUEUE_NAME, null, message.getBytes("UTF-8"));
-            System.out.println("send :" +message);
+            if (channel.waitForConfirms()) {
+                System.out.println("发送成功");
+                System.out.println("send :" +message);
+            } else {
+                //发送失败这里可进行消息重新投递的逻辑
+                System.out.println("发送失败");
+                System.out.println("send :" +message);
+            }
         }
 
         channel.close();
